@@ -70,7 +70,6 @@ def extract_target(df: pd.DataFrame):
 
 
 def split_train_test(X, y):
-    # TODO - Do przetestowania czy train jest jednakowy. Oddzielić train od test
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
     X_test, X_val, y_test, y_val = train_test_split(X_test, y_test, test_size=0.15, random_state=42)
 
@@ -78,7 +77,6 @@ def split_train_test(X, y):
 
 
 def scale_features(X_train, X_val, X_test):
-    # TODO -  scalować validacyjne
     cols = X_train.columns
 
     scaler = MinMaxScaler()
