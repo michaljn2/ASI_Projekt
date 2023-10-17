@@ -1,4 +1,4 @@
-import read_data as rd
+import read_data
 import transform_data
 import train_model
 
@@ -7,8 +7,8 @@ def main():
     url = 'https://raw.githubusercontent.com/michaljn2/ASI_Projekt/main/weatherAUS.csv'
     csv_path = "data/weatherAUS.csv"
 
-    rd.read_data(url, csv_path)
-    df = rd.read_file(csv_path)
+    read_data.read_data(url, csv_path)
+    df = read_data.read_file(csv_path)
 
     X_train, X_val, X_test, y_train, y_val, y_test = transform_data.transform(df)
     model = train_model.train_model(X_train, y_train)
