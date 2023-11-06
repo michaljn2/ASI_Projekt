@@ -1,0 +1,37 @@
+{
+    "os": "macOS-14.0-arm64-arm-64bit",
+    "python": "3.11.3",
+    "heartbeatAt": "2023-11-06T20:42:37.726162",
+    "startedAt": "2023-11-06T20:42:37.095737",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/michal/Projects/Python/ASI/ASI_4/ASI_Projekt/main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/michaljn2/ASI_Projekt.git",
+        "commit": "d620dd11d2610b13a135a54b52a4fdbc6457930a"
+    },
+    "email": "migryg@gmail.com",
+    "root": "/Users/michal/Projects/Python/ASI/ASI_4/ASI_Projekt",
+    "host": "macbook-pro-micha.home",
+    "username": "michal",
+    "executable": "/Users/michal/Projects/Python/ASI/ASI_4/ASI_Projekt/bin/python",
+    "cpu_count": 10,
+    "cpu_count_logical": 10,
+    "disk": {
+        "/": {
+            "total": 926.3517189025879,
+            "used": 9.147785186767578
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 32.0
+    }
+}
