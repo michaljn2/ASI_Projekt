@@ -5,6 +5,7 @@ import train_model
 import wandb
 from wandb.sklearn import plot_precision_recall, plot_feature_importances
 from wandb.sklearn import plot_class_proportions, plot_learning_curve, plot_roc
+from wandb.sklearn import plot_summary_metrics
 
 
 def main():
@@ -27,11 +28,15 @@ def main():
         {"test_size": 0.15, "train_len": len(X_train), "test_len": len(X_test)}
     )
 
-    plot_class_proportions(y_train, y_test, labels=df.columns)
+    labels = X_train.columns
+
+    plot_class_proportions(y_train, y_test, labels=labels)
     plot_learning_curve(model, X_train, y_train)
-    plot_roc(y_test, y_probas, labels=df.columns)
-    plot_precision_recall(y_test, y_probas, labels=df.columns)
-    plot_feature_importances(model)
+    plot_roc(y_test, y_probas, labels=labels)
+    plot_precision_recall(y_test, y_probas, labels=labels)
+    plot_feature_importances(model, feature_names=labels)
+    plot_summary_metrics(model=model, X=X_train, y=y_train, X_test=X_test, y_test=y_test)
+    
 
     wandb.finish()
 
