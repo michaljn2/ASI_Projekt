@@ -1,3 +1,5 @@
+import sqlite3
+
 import read_data
 import transform_data
 import train_model
@@ -11,9 +13,12 @@ from wandb.sklearn import plot_summary_metrics
 def main():
     url = "https://raw.githubusercontent.com/michaljn2/ASI_Projekt/main/weatherAUS.csv"
     csv_path = "data/weatherAUS.csv"
+    conn = sqlite3.connect("asi.db")
+    read_data.save_data_to_db(conn, csv_path)
 
     # read_data.read_data(url, csv_path)
-    df = read_data.read_file(csv_path)
+    # df = read_data.read_file(csv_path)
+    df = read_data.read_data_from_sql(conn)
 
     X_train, X_val, X_test, y_train, y_val, y_test = transform_data.transform(df)
     model = train_model.train_model(X_train, y_train)
