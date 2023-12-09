@@ -96,6 +96,42 @@ And if you want to run an IPython session:
 kedro ipython
 ```
 
+# FastAPI Integration for [Your Project Name]
+
+This component of our project uses FastAPI to serve predictions from our Kedro-based machine learning model. FastAPI is a modern, fast web framework for building APIs with Python 3.7+.
+
+## Overview
+
+The API allows users to send data for prediction and receive the model's output. It's designed to be lightweight, easy to use, and to leverage the robust data processing capabilities of Kedro.
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.7+
+- Kedro
+- FastAPI
+- Uvicorn
+
+### How to use
+Make sure to have the requirements from our requirements.txt file downoladed. 
+Before starting the server make sure to run the Kedro app to generate the model.
+```
+kedro run
+```
+
+Start the FastAPI Server 
+Navigate to the directory containing your FastAPI app and run:
+```
+uvicorn app:app --reload
+```
+This will start a local server running the API.
+
+Access the API
+
+The API will be available at http://localhost:8000. You can access the automatically generated interactive API documentation at http://localhost:8000/docs.
+
+
 ### How to convert notebook cells to nodes in a Kedro project
 You can move notebook code over into a Kedro project structure using a mixture of [cell tagging](https://jupyter-notebook.readthedocs.io/en/stable/changelog.html#release-5-0-0) and Kedro CLI commands.
 
