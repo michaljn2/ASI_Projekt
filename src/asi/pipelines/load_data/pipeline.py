@@ -9,9 +9,15 @@ from .nodes import load_data
 
 def create_pipeline(**kwargs) -> Pipeline:
     return pipeline([
-        node(
+        # node(
+        #     func=load_data,
+        #     inputs="weatherAUS",
+        #     outputs="all_data",
+        #     name="load_data"
+        # )
+         node(
             func=load_data,
-            inputs="weatherAUS",
+            inputs=None,
             outputs="all_data",
             name="load_data"
         )
