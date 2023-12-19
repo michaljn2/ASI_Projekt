@@ -2,6 +2,7 @@
 as `asi` and `python -m asi`
 """
 import importlib
+import streamlit as st
 from pathlib import Path
 
 from kedro.framework.cli.utils import KedroCliError, load_entry_points
