@@ -506,3 +506,4 @@ package-lock.json
 
 # Kedro-Datasets plugin
 kedro/datasets/*
+src/asi/pipelines/visualize/secret.py
