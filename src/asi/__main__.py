@@ -61,6 +61,32 @@ def main(*args, **kwargs):
     cloud3pm_slider = st.slider("Cloudiness at 3pm", min_value=0, max_value=10, step=1)
     temp9am_slider = st.slider("Temperature at 9am", min_value=-10, max_value=50, step=1)
     temp3pm_slider = st.slider("Temperature at 3pm", min_value=-10, max_value=50, step=1)
+    location = st.selectbox('Select city', ['Albury', 'BadgerysCreek', 'Cobar', 'CoffsHarbour', 'Moree',
+       'Newcastle', 'NorahHead', 'NorfolkIsland', 'Penrith', 'Richmond',
+       'Sydney', 'SydneyAirport', 'WaggaWagga', 'Williamtown',
+       'Wollongong', 'Canberra', 'Tuggeranong', 'MountGinini', 'Ballarat',
+       'Bendigo', 'Sale', 'MelbourneAirport', 'Melbourne', 'Mildura',
+       'Nhil', 'Portland', 'Watsonia', 'Dartmoor', 'Brisbane', 'Cairns',
+       'GoldCoast', 'Townsville', 'Adelaide', 'MountGambier', 'Nuriootpa',
+       'Woomera', 'Albany', 'Witchcliffe', 'PearceRAAF', 'PerthAirport',
+       'Perth', 'SalmonGums', 'Walpole', 'Hobart', 'Launceston',
+       'AliceSprings', 'Darwin', 'Katherine', 'Uluru'])
+    windGustDir = st.selectbox("Select wind direction", ['W', 'WNW', 'WSW', 'NE', 'NNW', 'N', 'NNE', 'SW', 'ENE',
+       'SSE', 'S', 'NW', 'SE', 'ESE', 'E', 'SSW'])
+    windDir9am = st.selectbox("Select wind direction at 9am", ['W', 'WNW', 'WSW', 'NE', 'NNW', 'N', 'NNE', 'SW', 'ENE',
+       'SSE', 'S', 'NW', 'SE', 'ESE', 'E', 'SSW'])
+    windDir3pm = st.selectbox("Select wind direction at 3pm",
+                              ['W', 'WNW', 'WSW', 'NE', 'NNW', 'N', 'NNE', 'SW', 'ENE',
+                               'SSE', 'S', 'NW', 'SE', 'ESE', 'E', 'SSW'])
+
+    confirmPrediction = st.button("Predict", on_click=)
+
+    data = [[minTemp_slider, maxTemp_slider, rainfall_slider, evaporation_slider, sunshine_slider,
+             windGustSpeed_slider, windSpeed9am_slider, windSpeed3pm_slider, humidity9am_slider,
+             humidity3pm_slider, pressure9am_slider, pressure3pm_slider, cloud9am_slider,
+             cloud3pm_slider, temp9am_slider, temp3pm_slider, location, windGustDir, windDir9am, windDir3pm]]
+
+
 
 
 
