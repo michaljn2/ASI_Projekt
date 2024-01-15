@@ -96,7 +96,23 @@ And if you want to run an IPython session:
 kedro ipython
 ```
 
-# FastAPI Integration for [Your Project Name]
+### How to convert notebook cells to nodes in a Kedro project
+You can move notebook code over into a Kedro project structure using a mixture of [cell tagging](https://jupyter-notebook.readthedocs.io/en/stable/changelog.html#release-5-0-0) and Kedro CLI commands.
+
+By adding the `node` tag to a cell and running the command below, the cell's source code will be copied over to a Python file within `src/<package_name>/nodes/`:
+
+```
+kedro jupyter convert <filepath_to_my_notebook>
+```
+> *Note:* The name of the Python file matches the name of the original notebook.
+
+Alternatively, you may want to transform all your notebooks in one go. Run the following command to convert all notebook files found in the project root directory and under any of its sub-folders:
+
+```
+kedro jupyter convert --all
+```
+
+# FastAPI Integration
 
 This component of our project uses FastAPI to serve predictions from our Kedro-based machine learning model. FastAPI is a modern, fast web framework for building APIs with Python 3.7+.
 
@@ -127,26 +143,9 @@ uvicorn app:app --reload
 ```
 This will start a local server running the API.
 
-Access the API
+## Access the API
 
 The API will be available at http://localhost:8000. You can access the automatically generated interactive API documentation at http://localhost:8000/docs.
-
-
-### How to convert notebook cells to nodes in a Kedro project
-You can move notebook code over into a Kedro project structure using a mixture of [cell tagging](https://jupyter-notebook.readthedocs.io/en/stable/changelog.html#release-5-0-0) and Kedro CLI commands.
-
-By adding the `node` tag to a cell and running the command below, the cell's source code will be copied over to a Python file within `src/<package_name>/nodes/`:
-
-```
-kedro jupyter convert <filepath_to_my_notebook>
-```
-> *Note:* The name of the Python file matches the name of the original notebook.
-
-Alternatively, you may want to transform all your notebooks in one go. Run the following command to convert all notebook files found in the project root directory and under any of its sub-folders:
-
-```
-kedro jupyter convert --all
-```
 
 ### How to ignore notebook output cells in `git`
 To automatically strip out all output cell contents before committing to `git`, you can run `kedro activate-nbstripout`. This will add a hook in `.git/config` which will run `nbstripout` before anything is committed to `git`.

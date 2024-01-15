@@ -4,7 +4,7 @@ AutogluonModels/*
 # KEDRO PROJECT
 
 # ignore all local configuration
-conf/local/**
+# conf/local/**
 !conf/local/.gitkeep
 .telemetry
 
@@ -506,3 +506,4 @@ package-lock.json
 
 # Kedro-Datasets plugin
 kedro/datasets/*
+src/asi/pipelines/visualize/secret.py
