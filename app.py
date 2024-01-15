@@ -31,7 +31,6 @@ MLPredictor = context.catalog.load("MLPredictor")
 
 @app.get("/my_model", tags=['weather'])
 def predict_my_model(
-Date:str, 
     Location:str, 
     MinTemp:float, 
     MaxTemp:float, 
@@ -55,7 +54,6 @@ Date:str,
     RainToday:str
     ):
     args={
-    "Date": Date,
     "Location": Location,
     "MinTemp": MinTemp,
     "MaxTemp": MaxTemp,
