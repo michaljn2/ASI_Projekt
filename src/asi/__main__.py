@@ -116,6 +116,8 @@ def main(*args, **kwargs):
                                    pressure9am_slider, pressure3pm_slider, cloud9am_slider, cloud3pm_slider,
                                    temp9am_slider, temp3pm_slider, rainToday))
 
+        st.subheader("Will it rain in Australia?")
+        st.subheader(res.json()[1])
 
 
 if __name__ == "__main__":
