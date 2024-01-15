@@ -105,6 +105,8 @@ def main(*args, **kwargs):
     #     st.subheader("Will it rain in Australia?")
     #     st.subheader("Yes" if pred[0] == 1 else "No")
 
+    st.subheader("Will it rain in Australia?")
+
     if (st.button("Predict")):
         res = requests.get(url="http://localhost:8000/my_model?Location={}&MinTemp={}&MaxTemp={}&Rainfall={}&"
                                "Evaporation={}&Sunshine={}&WindGustDir={}&WindGustSpeed={}&WindDir9am={}&WindDir3pm={}&"
@@ -116,7 +118,6 @@ def main(*args, **kwargs):
                                    pressure9am_slider, pressure3pm_slider, cloud9am_slider, cloud3pm_slider,
                                    temp9am_slider, temp3pm_slider, rainToday))
 
-        st.subheader("Will it rain in Australia?")
         st.subheader(res.json()["0"])
 
 
