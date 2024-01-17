@@ -11,7 +11,6 @@ from pathlib import Path
 # from kedro.framework.cli.utils import KedroCliError, load_entry_points
 # from kedro.framework.project import configure_project
 
-
 def _find_run_command(package_name):
     try:
         project_cli = importlib.import_module(f"{package_name}.cli")
@@ -91,19 +90,6 @@ def main(*args, **kwargs):
                                   ['W', 'WNW', 'WSW', 'NE', 'NNW', 'N', 'NNE', 'SW', 'ENE',
                                    'SSE', 'S', 'NW', 'SE', 'ESE', 'E', 'SSW'])
         rainToday = st.selectbox("Select if rain today", ["Yes", "No"])
-
-    # confirmPrediction = st.button("Predict", on_click=)
-
-    # data = [[minTemp_slider, maxTemp_slider, rainfall_slider, evaporation_slider, sunshine_slider,
-    #          windGustSpeed_slider, windSpeed9am_slider, windSpeed3pm_slider, humidity9am_slider,
-    #          humidity3pm_slider, pressure9am_slider, pressure3pm_slider, cloud9am_slider,
-    #          cloud3pm_slider, temp9am_slider, temp3pm_slider, location, windGustDir, windDir9am, windDir3pm]]
-    #
-    # pred = model.predict(data)
-
-    # with prediction:
-    #     st.subheader("Will it rain in Australia?")
-    #     st.subheader("Yes" if pred[0] == 1 else "No")
 
     st.subheader("Will it rain in Australia?")
 

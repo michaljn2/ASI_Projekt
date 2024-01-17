@@ -15,7 +15,8 @@ pytest~=7.2
 # Pin problematic traitlets release -  https://github.com/jupyter/notebook/issues/7048
 traitlets<5.10.0
 scikit-learn
-autogluon
-fastapi
+autogluon==1.0.0
+fastapi==0.104.1
 uvicorn
-wandb
+wandb==0.16.2
+faker==22.2.0

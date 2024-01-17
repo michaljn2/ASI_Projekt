@@ -11,7 +11,7 @@ def create_pipeline(**kwargs) -> Pipeline:
     return pipeline([
          node(
             func=train_model,
-            inputs="train_data",
+            inputs=["train_data", "params:autogluon.hyperparameters"],
             outputs="MLPredictor",
             name="train_model"
         ),
