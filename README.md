@@ -128,8 +128,6 @@ The API allows users to send data for prediction and receive the model's output.
 - Kedro
 - FastAPI
 - Uvicorn
-- Streamlit
-- SQLite 
 
 ### How to use
 Make sure to have the requirements from our requirements.txt file downoladed. 
@@ -154,6 +152,8 @@ To automatically strip out all output cell contents before committing to `git`, 
 
 > *Note:* Your output cells will be retained locally.
 
-## Package your Kedro project
-
-[Further information about building project documentation and packaging your project](https://docs.kedro.org/en/stable/tutorial/package_a_project.html)
+## How to run streamlit app
+To run streamlit app use
+```
+streamlit run __main__.py
+```
