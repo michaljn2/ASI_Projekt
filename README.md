@@ -128,6 +128,8 @@ The API allows users to send data for prediction and receive the model's output.
 - Kedro
 - FastAPI
 - Uvicorn
+- Streamlit
+- SQLite 
 
 ### How to use
 Make sure to have the requirements from our requirements.txt file downoladed. 
