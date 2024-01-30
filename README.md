@@ -25,6 +25,14 @@ To install them, run:
 pip install -r src/requirements.txt
 ```
 
+## Tools used
+- Kedro
+- AutoGluon
+- wandb
+- Streamlit
+- FastAPI
+- SQLite
+
 ## How to run your Kedro pipeline
 
 You can run your Kedro project with:
