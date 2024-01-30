@@ -26,12 +26,12 @@ pip install -r src/requirements.txt
 ```
 
 ## Tools used
-- Kedro
-- AutoGluon
-- wandb
-- Streamlit
-- FastAPI
-- SQLite
+- Kedro - to create a modular environment
+- AutoGluon - to automate machine learning
+- wandb - to run ML experiments and make visualisations
+- Streamlit - to make a simple web application
+- FastAPI - as our API framework
+- SQLite - as our SQL database engine
 
 ## How to run your Kedro pipeline
 
